@@ -17,4 +17,4 @@ jobs:
         uses: actions/checkout@v2  # Checkout the repository code
 
       - name: Echo Hello World
-        run: echo demo.txt  # This is the command that will be run
+        run: cat demo.txt  # This is the command that will be run
