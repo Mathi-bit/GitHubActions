@@ -1,11 +1,20 @@
-name: hello
-on: push
+name: Echo Command on Ubuntu
 
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on pushes to the `main` branch
+  pull_request:
+    branches:
+      - main  # Trigger the workflow on pull requests to the `main` branch
 
-jobs :
-  hello:
-   runs-on : ubnutu-latest
+jobs:
+  echo:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
 
-   steps:
-   - name : print hello world
-     run : echo "hello.txt"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # Checkout the repository code
+
+      - name: Echo Hello World
+        run: echo demo.txt  # This is the command that will be run
