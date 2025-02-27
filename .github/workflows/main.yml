@@ -1,0 +1,11 @@
+name: hello
+on: push
+
+
+jobs :
+  hello:
+   runs-on : ubnutu-latest
+
+   steps:
+   - name : print hello world
+     run : echo "hello.txt"
